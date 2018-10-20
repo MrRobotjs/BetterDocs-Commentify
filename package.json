@@ -1,0 +1,40 @@
+{
+  "name": "gh-commentify",
+  "version": "1.0.0",
+  "description": "A re-director to for gh-comments",
+  "repository": "https://github.com/orta/gh-commentify.git",
+  "author": "Orta Therox",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn tsc",
+    "postinstall": "yarn build",
+    "test": "jest",
+    "dev": "concurrently --kill-others \"tsc -w\" \"nodemon dist/index.js\"",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@types/express": "^4.11.1",
+    "@types/node-fetch": "^1.6.7",
+    "express": "^4.15.3",
+    "node-fetch": "^1.7.1",
+    "typescript": "^2.7.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.1.0",
+    "concurrently": "^3.5.1",
+    "jest": "^22.1.4",
+    "nodemon": "^1.14.11",
+    "ts-jest": "^22.0.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$"
+  }
+}
