@@ -45,7 +45,7 @@ app.get("/repos/:owner/:repo/issues/:number", (req, res) => {
 })
 
 app.get("/", (request, res) => {
-  res.send("It's working!")
+  res.send("BetterDocs API is working!")
 })
 app.listen(app.get("port"), () => {
   console.log(`Started server at http://localhost:${process.env.PORT || 5000}`)
