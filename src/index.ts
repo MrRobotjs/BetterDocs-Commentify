@@ -1,6 +1,7 @@
 import { GitHub } from "./github"
 import * as express from "express"
 import { comments } from "./requests"
+import { issues } from "./requests"
 
 const github = GitHub(process.env.GITHUB_ACCESS_TOKEN)
 const port = Number(process.env.PORT) || 5000
